@@ -1,0 +1,7 @@
+# Enforce LF line endings for all text files in the repository
+* text=auto eol=lf
+
+# You can exclude specific binary files where line ending conversion would break them
+*.png binary
+*.jpg binary
+*.pdf binary

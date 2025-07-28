@@ -1,0 +1,1971 @@
+Starting PDF processing...
+🚀 PDF PROCESSING PIPELINE STARTED
+============================================================
+📁 Input Directory: Datasets/pdf
+📁 Output Directory: Datasets/output
+📁 Phase 2 Logs Directory: Datasets/output/phase2_logs
+📊 Found 5 PDF files
+
+================================================================================
+📄 PROCESSING FILE 1/5: E0CCG5S239.pdf
+================================================================================
+
+============================================================
+📖 CHECKING FOR EMBEDDED TABLE OF CONTENTS (PyMuPDF get_toc)
+============================================================
+❌ No Table of Contents found using get_toc(). Proceeding with custom outline extraction.
+🔍 EXTRACTING CONTENT from document with 1 pages
+📄 Page 1: Found 54 text lines
+✅ EXTRACTION COMPLETE: 54 total text lines
+
+============================================================
+🎯 ENHANCED PHASE 1: TITLE EXTRACTION WITH PROXIMITY DETECTION
+============================================================
+📊 Analyzing 54 lines from first page
+📄 Document type detected: document
+📏 Font sizes (largest first): [11.7, 9.7]
+📍 Lines in title zone (top 40%): 22
+🎯 CONDITION A: Simple document (≤2 font sizes)
+🔍 Found 22 initial candidates
+❌ Content validation failed: '1....'
+❌ Content validation failed: '2....'
+❌ Content validation failed: '3....'
+❌ Content validation failed: '4....'
+❌ Content validation failed: '5....'
+❌ Content validation failed: '6....'
+❌ Content validation failed: '7....'
+❌ Content validation failed: '8....'
+✅ 14 candidates passed content validation
+📝 Grouped into 1 primary title lines
+
+🔍 PRIMARY PROXIMITY EXPANSION
+📦 Primary title bbox: [199.86000061035156, 106.07836151123047, 437.190673828125, 119.10208129882812]
+🔗 EXPANDED PRIMARY: 1 original + 0 proximity = 1 total
+
+🔍 SEARCHING FOR SECONDARY TITLE COMPONENTS WITH PROXIMITY
+📏 Primary title font: 11.7pt
+📍 Expanded primary ends at: y=119.1
+📏 Second largest font: 9.7pt
+🎯 Found 2 secondary title candidates
+✅ Secondary candidate: 'Name of the Government Servant'
+❌ Secondary validation failed: '1....'
+📝 Grouped into 1 secondary title lines
+
+🔍 SECONDARY PROXIMITY EXPANSION
+📏 Secondary proximity thresholds: vertical=12.5pt, horizontal=0.3
+📦 Secondary title bbox: [95.99856567382812, 132.9924774169922, 243.4400634765625, 144.7442169189453]
+📍 Secondary proximity candidate: 'Designation...' (Font: 9.7pt)
+✅ Added secondary proximity line: 'Designation'
+🔗 EXPANDED SECONDARY: 1 original + 1 proximity = 2 total
+🔗 FINAL COMBINATION: 1 expanded primary + 2 expanded secondary
+
+✅ PROXIMITY-ENHANCED TITLE EXTRACTED with high confidence
+📝 Complete Title (3 lines): 'Application form for grant of LTC advance Name of the Government Servant Designation...'
+📍 Final comprehensive bbox: [95.99856567382812, 106.07836151123047, 437.190673828125, 162.8006134033203]
+🧹 Skipped 5 lines before/overlapping complete title
+📊 Remaining lines for heading analysis: 49
+
+==================================================
+🔎 PHASE 2: HEADING CANDIDATE IDENTIFICATION
+==================================================
+📊 Most common font overall: 9.7pt
+📊 Identified body text font: 9.7pt
+📏 Heading font threshold: >= 9.7pt
+🎯 ALL potential heading font sizes found: []
+📊 Total unique fonts to check: 0 out of 1
+🔍 Identifying noise fonts (appear on >1 pages, <7.76pt)
+📊 After removing noise fonts: 0 fonts remain
+🔍 Processing 49 lines across 1 pages...
+
+📄 Processing page 1 (49 lines)
+  SKIPPED (Content FAILED): 'Date of entering the Central Government...'
+  SKIPPED (Content FAILED): '3....'
+  SKIPPED (F1 FAILED): 'Service...'
+  SKIPPED (F1 FAILED): 'PAY + SI + NPA...'
+  SKIPPED (Content FAILED): '4....'
+  SKIPPED (F1 FAILED): 'Whether permanent or temporary...'
+  SKIPPED (Content FAILED): '5....'
+  SKIPPED (Content FAILED): '6....'
+  SKIPPED (F1 FAILED): 'Home Town as recorded in the Service Boo...'
+  SKIPPED (F1 FAILED): 'Whether wife / husband is employed and i...'
+  SKIPPED (Content FAILED): '7....'
+  SKIPPED (F1 FAILED): 'so whether entitled to LTC...'
+  SKIPPED (F1 FAILED): 'Whether the concession is to be availed ...'
+  SKIPPED (F1 FAILED): 'visiting home town and if so block for w...'
+  SKIPPED (Content FAILED): '8....'
+  SKIPPED (F1 FAILED): 'LTC is to be availed....'
+  SKIPPED (F1 FAILED): '(a) If the concession is to visit anywhe...'
+  SKIPPED (F1 FAILED): 'India, the place to be visited....'
+  SKIPPED (Content FAILED): '9....'
+  SKIPPED (F1 FAILED): '(b) Block for which to be availed....'
+  SKIPPED (F1 FAILED): 'Single...'
+  SKIPPED (F1 FAILED): 'rail...'
+  SKIPPED (F1 FAILED): 'fare/bus...'
+  SKIPPED (F1 FAILED): 'fare...'
+  SKIPPED (F1 FAILED): 'from...'
+  SKIPPED (F1 FAILED): 'the...'
+  SKIPPED (F1 FAILED): 'headquarters to home town/place of visit...'
+  SKIPPED (Content FAILED): '10....'
+  SKIPPED (F1 FAILED): 'shortest route....'
+  SKIPPED (F1 FAILED): 'Persons in respect of whom LTC is propos...'
+  🎯 F1 PASSED: 'S.No...' (Style)
+    ✅ Indentation check PASSED (Diff: 115.4pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #1: 'S.No...' (Page 1, 9.7pt)
+
+  🎯 F1 PASSED: 'Name...' (Style)
+    ✅ Indentation check PASSED (Diff: 132.1pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #2: 'Name...' (Page 1, 9.7pt)
+
+  🎯 F1 PASSED: 'Age...' (Style)
+    ✅ Indentation check PASSED (Diff: 101.1pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #3: 'Age...' (Page 1, 9.7pt)
+
+  🎯 F1 PASSED: 'Relationship...' (Style)
+    ❌ Vertical spacing check FAILED (above: -11.8pt, below: 0.4pt)
+    ❌ Indentation check FAILED (Diff: -341.0pt)
+  SKIPPED (F2 FAILED): 'Relationship...'
+  SKIPPED (Content FAILED): '1....'
+  SKIPPED (Content FAILED): '2....'
+  SKIPPED (Content FAILED): '11....'
+  SKIPPED (Content FAILED): '3....'
+  SKIPPED (Content FAILED): '4....'
+  SKIPPED (Content FAILED): '5....'
+  SKIPPED (Content FAILED): '6....'
+  SKIPPED (F1 FAILED): '12. Amount of advance required....'
+  SKIPPED (F1 FAILED): 'Rs....'
+  SKIPPED (F1 FAILED): 'I declare that the particulars furnished...'
+  SKIPPED (F1 FAILED): 'undertake to produce the tickets for the...'
+  SKIPPED (F1 FAILED): 'In the event of cancellation of the jour...'
+  SKIPPED (F1 FAILED): 'advance, I undertake to refund the entir...'
+  SKIPPED (Content FAILED): 'Date...'
+  🎯 F1 PASSED: 'Signature of Government Servant....' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.0pt, below: 2.0pt)
+    -- Indentation check N/A (Last line on page)
+  SKIPPED (F2 FAILED): 'Signature of Government Servant....'
+📊 Page 1: Found 3 heading candidates
+
+📊 CANDIDATES BY FONT SIZE:
+  9.7pt: 3 candidates
+🎯 PHASE 2 COMPLETE: Found 3 total candidates
+📊 Covered 1 different font sizes
+
+==================================================
+🏷️ PHASE 3: H1-H4 LEVEL ASSIGNMENT
+==================================================
+📊 Found 1 unique font sizes in candidates
+📊 FONT SIZE RANKING (Font SIZE Priority):
+  1. 9.7pt - Prominence: 2.00, Count: 3, Bold: 3, Italic: 0
+🎯 H1 ASSIGNED: 9.7pt (largest font)
+📝 H1: 'S.No...' (Page 1)
+📝 H1: 'Name...' (Page 1)
+📝 H1: 'Age...' (Page 1)
+
+📊 FINAL HEADING STATISTICS:
+  H1: 3 headings
+🎉 PHASE 3 COMPLETE: 3 headings assigned
+
+✅ SUCCESS: E0CCG5S239.pdf
+💾 Output: E0CCG5S239.json
+📊 Headings: 3
+⏱️ Time: 1.44s
+📋 Title: 'Application form for grant of LTC advance Name of the Govern...'
+
+================================================================================
+📄 PROCESSING FILE 2/5: E0CCG5S312.pdf
+================================================================================
+
+============================================================
+📖 CHECKING FOR EMBEDDED TABLE OF CONTENTS (PyMuPDF get_toc)
+============================================================
+❌ No Table of Contents found using get_toc(). Proceeding with custom outline extraction.
+🔍 EXTRACTING CONTENT from document with 12 pages
+📄 Page 1: Found 6 text lines
+📄 Page 2: Found 11 text lines
+📄 Page 3: Found 31 text lines
+📄 Page 4: Found 73 text lines
+📄 Page 5: Found 36 text lines
+📄 Page 6: Found 31 text lines
+📄 Page 7: Found 45 text lines
+📄 Page 8: Found 27 text lines
+📄 Page 9: Found 14 text lines
+📄 Page 10: Found 55 text lines
+📄 Page 11: Found 60 text lines
+📄 Page 12: Found 19 text lines
+✅ EXTRACTION COMPLETE: 408 total text lines
+
+============================================================
+🎯 ENHANCED PHASE 1: TITLE EXTRACTION WITH PROXIMITY DETECTION
+============================================================
+📊 Analyzing 6 lines from first page
+📄 Document type detected: document
+📏 Font sizes (largest first): [24.0, 18.0, 12.0, 10.0]
+📍 Lines in title zone (top 40%): 3
+🎯 CONDITION B: Clear font hierarchy detected
+🔍 Found 2 initial candidates
+✅ 2 candidates passed content validation
+📝 Grouped into 1 primary title lines
+
+🔍 PRIMARY PROXIMITY EXPANSION
+📦 Primary title bbox: [252.64999389648438, 189.62002563476562, 365.9539489746094, 216.38002014160156]
+🔗 EXPANDED PRIMARY: 1 original + 0 proximity = 1 total
+
+🔍 SEARCHING FOR SECONDARY TITLE COMPONENTS WITH PROXIMITY
+📏 Primary title font: 24.0pt
+📍 Expanded primary ends at: y=216.4
+📏 Second largest font: 18.0pt
+🎯 Found 0 secondary title candidates
+📝 No secondary title found - using expanded primary only
+
+✅ PROXIMITY-ENHANCED TITLE EXTRACTED with high confidence
+📝 Complete Title (1 lines): 'Overview...'
+📍 Final comprehensive bbox: [252.64999389648438, 189.62002563476562, 365.9539489746094, 216.38002014160156]
+🧹 Skipped 1 lines before/overlapping complete title
+📊 Remaining lines for heading analysis: 407
+
+==================================================
+🔎 PHASE 2: HEADING CANDIDATE IDENTIFICATION
+==================================================
+📊 Most common font overall: 10.0pt
+📊 Identified body text font: 10.0pt
+📏 Heading font threshold: >= 10.0pt
+🎯 ALL potential heading font sizes found: [24.0, 18.0, 16.0, 14.0, 12.0]
+📊 Total unique fonts to check: 5 out of 7
+🔍 Identifying noise fonts (appear on >8 pages, <8.0pt)
+🗑️ NOISE FONT: 6.0pt (appears on 11/12 pages)
+📊 After removing noise fonts: 5 fonts remain
+🔍 Processing 407 lines across 12 pages...
+
+📄 Processing page 1 (5 lines)
+  🎯 F1 PASSED: 'Foundation Level Extensions...' (Style, Large Font: 24.0pt)
+    ✅ Vertical spacing check PASSED (above: 172.8pt > below: 110.8pt)
+    ✅ Indentation check PASSED (Diff: 136.3pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #1: 'Foundation Level Extensions...' (Page 1, 24.0pt)
+
+  SKIPPED (Content FAILED): 'Version 1.0...'
+  🎯 F1 PASSED: 'International Software Testing Qualifica...' (Large Font: 18.0pt)
+    ❌ Vertical spacing check FAILED (above: 69.9pt, below: 166.5pt)
+    ❌ Indentation check FAILED (Diff: -32.4pt)
+  SKIPPED (F2 FAILED): 'International Software Testing Qualifica...'
+  SKIPPED (Content FAILED): 'Copyright Notice...'
+  SKIPPED (F1 FAILED): 'This document may be copied in its entir...'
+📊 Page 1: Found 1 heading candidates
+
+📄 Processing page 2 (11 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #2: 'Overview...' (Page 2, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications...'
+  SKIPPED (F1 FAILED): 'Board...'
+  SKIPPED (Content FAILED): 'Copyright © International Software Testi...'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 2 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 2: Found 1 heading candidates
+
+📄 Processing page 3 (31 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #3: 'Overview...' (Page 3, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  🎯 F1 PASSED: 'Revision History...' (Style, Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 36.2pt > below: 12.7pt)
+    ✅ Indentation check PASSED (Diff: 3.5pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #4: 'Revision History...' (Page 3, 16.0pt)
+
+  SKIPPED (Content FAILED): 'Version...'
+  SKIPPED (Content FAILED): 'Date...'
+  🎯 F1 PASSED: 'Remarks...' (Style)
+    ❌ Vertical spacing check FAILED (above: -11.1pt, below: 1.3pt)
+    ❌ Indentation check FAILED (Diff: -204.3pt)
+  SKIPPED (F2 FAILED): 'Remarks...'
+  SKIPPED (Content FAILED): '0.1...'
+  SKIPPED (F1 FAILED): '18 JUNE 2013...'
+  SKIPPED (Content FAILED): 'Initial version...'
+  SKIPPED (Content FAILED): '0.2...'
+  SKIPPED (F1 FAILED): '23 JULY 2013...'
+  SKIPPED (F1 FAILED): 'WG reviewed and confirmed...'
+  SKIPPED (Content FAILED): '0.3...'
+  SKIPPED (F1 FAILED): '6 NOV 2013...'
+  SKIPPED (F1 FAILED): 'amended population and diagram...'
+  SKIPPED (Content FAILED): '0.7...'
+  SKIPPED (F1 FAILED): '11 DEC 2013...'
+  SKIPPED (F1 FAILED): 'Amended Business Outcomes and Chapters m...'
+  SKIPPED (Content FAILED): '0.8...'
+  SKIPPED (F1 FAILED): '20 DEC 2013...'
+  SKIPPED (Content FAILED): 'Working group updates on 0.7...'
+  SKIPPED (Content FAILED): '1.0...'
+  SKIPPED (F1 FAILED): '31 MAY 2014...'
+  SKIPPED (F1 FAILED): 'GA release for Agile Extension...'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 3 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 3: Found 2 heading candidates
+
+📄 Processing page 4 (73 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #5: 'Overview...' (Page 4, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications...'
+  SKIPPED (F1 FAILED): 'Board...'
+  🎯 F1 PASSED: 'Table of Contents...' (Style, Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 36.2pt > below: 18.0pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #6: 'Table of Contents...' (Page 4, 16.0pt)
+
+  🎯 F1 PASSED: 'Revision History...' (Style)
+    ✅ Indentation check PASSED (Diff: 80.9pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #7: 'Revision History...' (Page 4, 10.0pt)
+
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '3...'
+  🎯 F1 PASSED: 'Table of Contents...' (Style)
+    ✅ Indentation check PASSED (Diff: 86.4pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #8: 'Table of Contents...' (Page 4, 10.0pt)
+
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '4...'
+  SKIPPED (Content FAILED): '1....'
+  🎯 F1 PASSED: 'Introduction to the Foundation Level Ext...' (Style)
+    ✅ Indentation check PASSED (Diff: 232.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #9: 'Introduction to the Foundation Level Ext...' (Page 4, 10.0pt)
+
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '6...'
+  SKIPPED (Content FAILED): '2....'
+  🎯 F1 PASSED: 'Introduction to Foundation Level Agile T...' (Style)
+    ✅ Indentation check PASSED (Diff: 267.9pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #10: 'Introduction to Foundation Level Agile T...' (Page 4, 10.0pt)
+
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '7...'
+  SKIPPED (Content FAILED): '2.1...'
+  SKIPPED (F1 FAILED): 'Intended Audience...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '7...'
+  SKIPPED (Content FAILED): '2.2...'
+  SKIPPED (F1 FAILED): 'Career Paths for Testers...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '7...'
+  SKIPPED (Content FAILED): '2.3...'
+  SKIPPED (F1 FAILED): 'Learning Objectives...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '7...'
+  SKIPPED (Content FAILED): '2.4...'
+  SKIPPED (F1 FAILED): 'Entry Requirements...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '8...'
+  SKIPPED (Content FAILED): '2.5...'
+  SKIPPED (F1 FAILED): 'Structure and Course Duration...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '8...'
+  SKIPPED (Content FAILED): '2.6...'
+  SKIPPED (F1 FAILED): 'Keeping It Current...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '9...'
+  SKIPPED (Content FAILED): '3....'
+  🎯 F1 PASSED: 'Overview of the Foundation Level Extensi...' (Style)
+    ✅ Indentation check PASSED (Diff: 323.1pt)
+  🎯 F2 PASSED: Indentation
+ ✅ SKIPPED (Potential Body Text - Mixed Style Heuristic): 'Overview of the Foundation Level Extensi...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Content FAILED): '3.1...'
+  SKIPPED (F1 FAILED): 'Business Outcomes...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Content FAILED): '3.2...'
+  SKIPPED (F1 FAILED): 'Content...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Content FAILED): '4....'
+  🎯 F1 PASSED: 'References...' (Style)
+    ✅ Indentation check PASSED (Diff: 55.3pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #11: 'References...' (Page 4, 10.0pt)
+
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Content FAILED): '4.1...'
+  SKIPPED (F1 FAILED): 'Trademarks...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Content FAILED): '4.2...'
+  SKIPPED (F1 FAILED): 'Documents and Web Sites...'
+  SKIPPED (Content FAILED): '...........................................'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 4 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 4: Found 7 heading candidates
+
+📄 Processing page 5 (36 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #12: 'Overview...' (Page 5, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications...'
+  SKIPPED (F1 FAILED): 'Board...'
+  🎯 F1 PASSED: 'Acknowledgements...' (Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 36.2pt > below: 18.1pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #13: 'Acknowledgements...' (Page 5, 16.0pt)
+
+  SKIPPED (F1 FAILED): 'This document was produced by a team fro...'
+  SKIPPED (F1 FAILED): 'Foundation Level Working Group....'
+  SKIPPED (F1 FAILED): 'The Agile Extension team thanks the revi...'
+  SKIPPED (F1 FAILED): 'At the time the Foundation Level Agile E...'
+  SKIPPED (F1 FAILED): 'Group had the following membership: Rex ...'
+  SKIPPED (F1 FAILED): 'Coleman (Learning Objectives Lead), Debr...'
+  SKIPPED (F1 FAILED): 'and Marketing Lead), Tauhida Parveen (Ed...'
+  SKIPPED (F1 FAILED): 'Authors: Rex Black, Anders Claesson, Ger...'
+  SKIPPED (F1 FAILED): 'Linetzki, Tilo Linz, Leo van der Aalst, ...'
+  SKIPPED (F1 FAILED): 'Internal Reviewers: Mette Bruhn-Pedersen...'
+  SKIPPED (F1 FAILED): 'Friedenberg, Kari Kakkonen, Beata Karpin...'
+  SKIPPED (F1 FAILED): 'Pääkkönen, Meile Posthuma, Gabor Puhalla...'
+  SKIPPED (F1 FAILED): 'Robert Treffny, Chris Van Bael, and Erik...'
+  SKIPPED (F1 FAILED): 'The team thanks also the following perso...'
+  SKIPPED (F1 FAILED): 'who participated in reviewing, commentin...'
+  SKIPPED (F1 FAILED): 'Almog, Richard Berns, Stephen Bird, Moni...'
+  SKIPPED (F1 FAILED): 'Huba Demeter, Arnaud Foucal, Cyril Fumer...'
+  SKIPPED (F1 FAILED): 'Isles, Shirley Itah, Martin Klonk, Kjell...'
+  SKIPPED (F1 FAILED): 'Morgan,Ninna Morin,Ingvar Nordstrom,Chri...'
+  SKIPPED (F1 FAILED): 'Helmut Pichler, Salvatore Reale, Stuart ...'
+  SKIPPED (F1 FAILED): 'Sandberg, Dakar Shalom,  Jian Shen, Marc...'
+  SKIPPED (F1 FAILED): 'Stephanie Ulrich, Tommi Välimäki, Jurian...'
+  SKIPPED (F1 FAILED): 'Xu, Ester Zabar, Wenqiang Zheng, Peter Z...'
+  SKIPPED (F1 FAILED): 'This document was formally approved for ...'
+  SKIPPED (F1 FAILED): '2014....'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 5 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 5: Found 2 heading candidates
+
+📄 Processing page 6 (31 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #14: 'Overview...' (Page 6, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  🎯 F1 PASSED: '1. Introduction to the Foundation Level ...' (Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 50.2pt > below: 5.5pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #15: '1. Introduction to the Foundation Level ...' (Page 6, 16.0pt)
+
+  SKIPPED (F1 FAILED): 'This overview document is intended for a...'
+  SKIPPED (F1 FAILED): 'Extensions who wants a high-level introd...'
+  SKIPPED (F1 FAILED): 'extension syllabi....'
+  SKIPPED (Content FAILED): 'From time to time, ISTQB will update thi...'
+  SKIPPED (F1 FAILED): 'introduced for the Foundation Level, or ...'
+  SKIPPED (Content FAILED): 'updated document will be available on th...'
+  SKIPPED (F1 FAILED): 'The ISTQB Foundation and Advanced Level ...'
+  SKIPPED (F1 FAILED): 'some time. New topics emerge due to tech...'
+  SKIPPED (F1 FAILED): 'are brought into the ISTQB program as ne...'
+  SKIPPED (F1 FAILED): 'Expert Level. For this reason, the exten...'
+  SKIPPED (Content FAILED): 'ISTQB program to incorporate new or upda...'
+  SKIPPED (F1 FAILED): 'introduced by the ISTQB periodically. Ex...'
+  SKIPPED (F1 FAILED): 'that is beyond the scope of this documen...'
+  SKIPPED (F1 FAILED): 'The following Foundation Level Extension...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'Agile Tester...'
+  SKIPPED (F1 FAILED): 'In this document, each Foundation Level ...'
+  SKIPPED (F1 FAILED): 'Outcomes are stated. The Business Outcom...'
+  SKIPPED (F1 FAILED): 'achieves a Foundation Level Extension Ce...'
+  SKIPPED (F1 FAILED): 'will outline the benefits for companies ...'
+  SKIPPED (F1 FAILED): 'level....'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 6 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 6: Found 2 heading candidates
+
+📄 Processing page 7 (45 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #16: 'Overview...' (Page 7, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  🎯 F1 PASSED: '2. Introduction to Foundation Level Agil...' (Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 50.2pt > below: 5.5pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #17: '2. Introduction to Foundation Level Agil...' (Page 7, 16.0pt)
+
+  SKIPPED (F1 FAILED): 'The certification for Foundation Level E...'
+  SKIPPED (F1 FAILED): 'working within Agile environments. It is...'
+  SKIPPED (F1 FAILED): 'Agile methods in the near future, or are...'
+  SKIPPED (F1 FAILED): 'provides an advantage for those who woul...'
+  SKIPPED (F1 FAILED): 'methodologies specific to their role....'
+  🎯 F1 PASSED: '2.1 Intended Audience...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 14.0pt > below: 7.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #18: '2.1 Intended Audience...' (Page 7, 14.0pt)
+
+  SKIPPED (F1 FAILED): 'The Foundation Level Extension –Agile Te...'
+  SKIPPED (F1 FAILED): '1. Professionals who have achieved in-de...'
+  SKIPPED (F1 FAILED): 'like to get an Agile Tester Certificate....'
+  SKIPPED (F1 FAILED): '2. Junior professional testers who are j...'
+  SKIPPED (F1 FAILED): 'Foundation Level certificate, and would ...'
+  SKIPPED (F1 FAILED): 'environment....'
+  SKIPPED (F1 FAILED): '3. Professionals who are relatively new ...'
+  SKIPPED (F1 FAILED): 'methods and techniques in their day to d...'
+  SKIPPED (F1 FAILED): '4. Professionals who are experienced in ...'
+  SKIPPED (F1 FAILED): 'understanding and knowledge about how to...'
+  SKIPPED (F1 FAILED): 'projects....'
+  SKIPPED (F1 FAILED): 'These professionals include people who a...'
+  SKIPPED (F1 FAILED): 'consultants, test managers, user accepta...'
+  SKIPPED (F1 FAILED): 'This Foundation Level Extension –Agile T...'
+  SKIPPED (F1 FAILED): 'wants a deeper understanding of software...'
+  SKIPPED (F1 FAILED): 'managers, software development managers,...'
+  SKIPPED (F1 FAILED): 'consultants....'
+  🎯 F1 PASSED: '2.2 Career Paths for Testers...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 25.5pt > below: 7.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #19: '2.2 Career Paths for Testers...' (Page 7, 14.0pt)
+
+  SKIPPED (F1 FAILED): 'Building on the Foundation Level, the Ag...'
+  SKIPPED (F1 FAILED): 'professional testers. A person with the ...'
+  SKIPPED (F1 FAILED): 'testing acquired at the Foundation Level...'
+  SKIPPED (F1 FAILED): 'an Agile project....'
+  SKIPPED (F1 FAILED): 'People possessing an ISTQB Foundation Le...'
+  SKIPPED (F1 FAILED): 'Tester Foundation Level acronym CTFL-AT....'
+  🎯 F1 PASSED: '2.3 Learning Objectives...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 25.5pt > below: 7.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #20: '2.3 Learning Objectives...' (Page 7, 14.0pt)
+
+  SKIPPED (Content FAILED): 'In general, the Foundation Level syllabu...'
+  SKIPPED (F1 FAILED): 'remember and recall terms and concepts s...'
+  SKIPPED (F1 FAILED): 'In addition, all Foundation Level syllab...'
+  SKIPPED (F1 FAILED): 'extension exam....'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 7 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 7: Found 5 heading candidates
+
+📄 Processing page 8 (27 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #21: 'Overview...' (Page 8, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  SKIPPED (F1 FAILED): 'That said, each extension level exam foc...'
+  SKIPPED (F1 FAILED): 'syllabus. The relevant learning objectiv...'
+  SKIPPED (F1 FAILED): 'chapter within each particular extension...'
+  🎯 F1 PASSED: '2.4 Entry Requirements...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 14.0pt > below: 7.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #22: '2.4 Entry Requirements...' (Page 8, 14.0pt)
+
+  SKIPPED (Content FAILED): 'To be able to participate in a Foundatio...'
+  SKIPPED (F1 FAILED): 'obtained the ISTQB Foundation Level cert...'
+  🎯 F1 PASSED: '2.5 Structure and Course Duration...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 14.0pt > below: 7.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #23: '2.5 Structure and Course Duration...' (Page 8, 14.0pt)
+
+  SKIPPED (F1 FAILED): 'The Foundation Level Extension –Agile Te...'
+  SKIPPED (F1 FAILED): 'Foundation Level syllabus....'
+  SKIPPED (F1 FAILED): 'The syllabi must be taught in the follow...'
+  🎯 F1 PASSED: 'Syllabus...' (Style)
+    ✅ Indentation check PASSED (Diff: 156.3pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #24: 'Syllabus...' (Page 8, 10.0pt)
+
+  🎯 F1 PASSED: 'Days...' (Style)
+    ❌ Vertical spacing check FAILED (above: -11.1pt, below: 7.0pt)
+    ❌ Indentation check FAILED (Diff: -156.3pt)
+  SKIPPED (F2 FAILED): 'Days...'
+  SKIPPED (F1 FAILED): 'Baseline: Foundation...'
+  SKIPPED (Content FAILED): '3...'
+  SKIPPED (F1 FAILED): 'Extension: Agile Tester...'
+  SKIPPED (Content FAILED): '2...'
+  SKIPPED (F1 FAILED): 'The following figure shows the structure...'
+  SKIPPED (F1 FAILED): 'Foundation Level....'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 8 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 8: Found 4 heading candidates
+
+📄 Processing page 9 (14 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #25: 'Overview...' (Page 9, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  🎯 F1 PASSED: '2.6 Keeping It Current...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 61.2pt > below: 7.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #26: '2.6 Keeping It Current...' (Page 9, 14.0pt)
+
+  SKIPPED (F1 FAILED): 'The software industry changes rapidly. T...'
+  SKIPPED (F1 FAILED): 'access to relevant and current informati...'
+  SKIPPED (Content FAILED): 'www.istqb.org web site which refer to su...'
+  SKIPPED (F1 FAILED): 'in the industry. This information is not...'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 9 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 9: Found 2 heading candidates
+
+📄 Processing page 10 (55 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #27: 'Overview...' (Page 10, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  🎯 F1 PASSED: '3. Overview of the Foundation Level Exte...' (Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 47.1pt > below: 0.7pt)
+    ✅ Indentation check PASSED (Diff: 36.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #28: '3. Overview of the Foundation Level Exte...' (Page 10, 16.0pt)
+
+  🎯 F1 PASSED: 'Syllabus...' (Style, Large Font: 16.0pt)
+    ❌ Vertical spacing check FAILED (above: 0.7pt, below: 31.8pt)
+    ❌ Indentation check FAILED (Diff: -36.0pt)
+  SKIPPED (F2 FAILED): 'Syllabus...'
+  🎯 F1 PASSED: '3.1 Business Outcomes...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 31.8pt > below: 7.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #29: '3.1 Business Outcomes...' (Page 10, 14.0pt)
+
+  SKIPPED (Content FAILED): 'This section lists the Business Outcomes...'
+  SKIPPED (F1 FAILED): 'Extension –Agile Tester certification....'
+  SKIPPED (F1 FAILED): 'An Agile Tester can…...'
+  SKIPPED (F1 FAILED): 'AFM1...'
+  SKIPPED (F1 FAILED): 'Collaborate in a cross-functional Agile ...'
+  SKIPPED (F1 FAILED): 'practices of Agile software development....'
+  SKIPPED (F1 FAILED): 'AFM2...'
+  SKIPPED (F1 FAILED): 'Adapt existing testing experience and kn...'
+  SKIPPED (F1 FAILED): 'AFM3...'
+  SKIPPED (F1 FAILED): 'Support the Agile team in planning test-...'
+  SKIPPED (F1 FAILED): 'AFM4...'
+  SKIPPED (F1 FAILED): 'Apply relevant methods and techniques fo...'
+  SKIPPED (F1 FAILED): 'AFM5...'
+  SKIPPED (F1 FAILED): 'Assist the Agile team in test automation...'
+  SKIPPED (F1 FAILED): 'AFM6...'
+  SKIPPED (F1 FAILED): 'Assist business stakeholders in defining...'
+  SKIPPED (F1 FAILED): 'scenarios, requirements and acceptance c...'
+  SKIPPED (F1 FAILED): 'AFM7...'
+  SKIPPED (F1 FAILED): 'Work and share information with other te...'
+  SKIPPED (F1 FAILED): 'styles and channels....'
+  SKIPPED (F1 FAILED): 'In general, a Certified Tester Foundatio...'
+  SKIPPED (F1 FAILED): 'skills to working effectively within an ...'
+  🎯 F1 PASSED: '3.2 Content...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 25.5pt > below: 7.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #30: '3.2 Content...' (Page 10, 14.0pt)
+
+  SKIPPED (F1 FAILED): 'Chapter 1: Agile Software Development...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should remember the basic con...'
+  SKIPPED (F1 FAILED): 'Manifesto....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should understand the advanta...'
+  SKIPPED (F1 FAILED): 'early and frequent feedback....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should recall Agile software ...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to write testa...'
+  SKIPPED (F1 FAILED): 'business representatives....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should understand how retrosp...'
+  SKIPPED (F1 FAILED): 'improvement in Agile projects....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should understand the use and...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should know the differences b...'
+  SKIPPED (F1 FAILED): 'adds value in each of these activities....'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 10 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 10: Found 4 heading candidates
+
+📄 Processing page 11 (60 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #31: 'Overview...' (Page 11, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications...'
+  SKIPPED (F1 FAILED): 'Board...'
+  SKIPPED (F1 FAILED): 'Chapter 2: Fundamental Agile Testing Pri...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to describe th...'
+  SKIPPED (F1 FAILED): 'and non-Agile projects....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to describe ho...'
+  SKIPPED (F1 FAILED): 'Agile projects....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to describe th...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to describe th...'
+  SKIPPED (F1 FAILED): 'testing in an Agile project, including t...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to describe th...'
+  SKIPPED (F1 FAILED): 'explain why test automation is important...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should understand the skills ...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to understand ...'
+  SKIPPED (F1 FAILED): 'Chapter 3: Agile Testing Methods, Techni...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to recall the ...'
+  SKIPPED (F1 FAILED): 'driven development, and behavior-driven ...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to recall the ...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to summarize t...'
+  SKIPPED (F1 FAILED): 'levels and testing types....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'For a given Agile project, the tester sh...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to assess qual...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to estimate te...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to interpret r...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to explain to ...'
+  SKIPPED (F1 FAILED): 'criteria....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'Given a user story, the tester should be...'
+  SKIPPED (F1 FAILED): 'cases....'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'For both functional and non-functional b...'
+  SKIPPED (F1 FAILED): 'black box test design techniques based o...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to perform exp...'
+  SKIPPED (Content FAILED): '...'
+  SKIPPED (F1 FAILED): 'The tester should be able to recall diff...'
+  SKIPPED (F1 FAILED): 'and to activities in Agile projects....'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 11 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 11: Found 1 heading candidates
+
+📄 Processing page 12 (19 lines)
+  SKIPPED (F1 FAILED): 'International...'
+  🎯 F1 PASSED: 'Overview...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 363.5pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #32: 'Overview...' (Page 12, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'Software Testing...'
+  SKIPPED (F1 FAILED): 'Foundation Level Extension –Agile Tester...'
+  SKIPPED (F1 FAILED): 'Qualifications Board...'
+  🎯 F1 PASSED: '4. References...' (Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 50.2pt > below: 30.6pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #33: '4. References...' (Page 12, 16.0pt)
+
+  🎯 F1 PASSED: '4.1 Trademarks...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 30.6pt > below: 7.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #34: '4.1 Trademarks...' (Page 12, 14.0pt)
+
+  SKIPPED (F1 FAILED): 'The following registered trademarks and ...'
+  SKIPPED (F1 FAILED): 'ISTQB® is a registered trademark of the ...'
+  🎯 F1 PASSED: '4.2 Documents and Web Sites...' (Large Font: 14.0pt)
+    ✅ Vertical spacing check PASSED (above: 25.4pt > below: 7.7pt)
+    ✅ Indentation check PASSED (Diff: 5.4pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #35: '4.2 Documents and Web Sites...' (Page 12, 14.0pt)
+
+  🎯 F1 PASSED: 'Identifier...' (Style)
+    ✅ Indentation check PASSED (Diff: 117.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #36: 'Identifier...' (Page 12, 10.0pt)
+
+  🎯 F1 PASSED: 'Reference...' (Style)
+    ❌ Vertical spacing check FAILED (above: -11.1pt, below: 3.5pt)
+    ❌ Indentation check FAILED (Diff: -117.0pt)
+  SKIPPED (F2 FAILED): 'Reference...'
+  SKIPPED (F1 FAILED): '[ISTQB-Web]...'
+  SKIPPED (F1 FAILED): 'Web site of the International Software T...'
+  SKIPPED (Content FAILED): 'to this website for the latest ISTQB Glo...'
+  SKIPPED (Content FAILED): 'Version 2014...'
+  SKIPPED (Content FAILED): 'Page 12 of 12...'
+  SKIPPED (F1 FAILED): 'May 31, 2014...'
+  SKIPPED (Content FAILED): '© International Software Testing Qualifi...'
+📊 Page 12: Found 5 heading candidates
+
+📊 CANDIDATES BY FONT SIZE:
+  24.0pt: 1 candidates
+  16.0pt: 7 candidates
+  14.0pt: 10 candidates
+  12.0pt: 11 candidates
+  10.0pt: 7 candidates
+🎯 PHASE 2 COMPLETE: Found 36 total candidates
+📊 Covered 5 different font sizes
+
+==================================================
+🏷️ PHASE 3: H1-H4 LEVEL ASSIGNMENT
+==================================================
+📊 Found 5 unique font sizes in candidates
+📊 FONT SIZE RANKING (Font SIZE Priority):
+  1. 24.0pt - Prominence: 2.00, Count: 1, Bold: 1, Italic: 0
+  2. 16.0pt - Prominence: 0.57, Count: 7, Bold: 2, Italic: 0
+  3. 14.0pt - Prominence: 0.00, Count: 10, Bold: 0, Italic: 0
+  4. 12.0pt - Prominence: 0.00, Count: 11, Bold: 0, Italic: 0
+  5. 10.0pt - Prominence: 2.00, Count: 7, Bold: 7, Italic: 0
+🎯 H1 ASSIGNED: 24.0pt (largest font)
+🎯 H2 ASSIGNED: 16.0pt (significant drop from 24.0pt)
+🎯 H3 ASSIGNED: 14.0pt (significant drop from 16.0pt)
+🎯 H4 ASSIGNED: 12.0pt (significant drop from 14.0pt)
+📝 H1: 'Foundation Level Extensions...' (Page 1)
+📝 H4: 'Overview...' (Page 2)
+📝 H4: 'Overview...' (Page 3)
+📝 H2: 'Revision History...' (Page 3)
+📝 H4: 'Overview...' (Page 4)
+📝 H2: 'Table of Contents...' (Page 4)
+📝 H4: 'Revision History...' (Page 4)
+📝 H4: 'Table of Contents...' (Page 4)
+📝 H4: 'Introduction to the Foundation Level Extensions...' (Page 4)
+📝 H4: 'Introduction to Foundation Level Agile Tester Exte...' (Page 4)
+📝 H4: 'References...' (Page 4)
+📝 H4: 'Overview...' (Page 5)
+📝 H2: 'Acknowledgements...' (Page 5)
+📝 H4: 'Overview...' (Page 6)
+📝 H2: '1. Introduction to the Foundation Level Extensions...' (Page 6)
+📝 H4: 'Overview...' (Page 7)
+📝 H2: '2. Introduction to Foundation Level Agile Tester E...' (Page 7)
+📝 H3: '2.1 Intended Audience...' (Page 7)
+📝 H3: '2.2 Career Paths for Testers...' (Page 7)
+📝 H3: '2.3 Learning Objectives...' (Page 7)
+📝 H4: 'Overview...' (Page 8)
+📝 H3: '2.4 Entry Requirements...' (Page 8)
+📝 H3: '2.5 Structure and Course Duration...' (Page 8)
+📝 H4: 'Syllabus...' (Page 8)
+📝 H4: 'Overview...' (Page 9)
+📝 H3: '2.6 Keeping It Current...' (Page 9)
+📝 H4: 'Overview...' (Page 10)
+📝 H2: '3. Overview of the Foundation Level Extension –Agi...' (Page 10)
+📝 H3: '3.1 Business Outcomes...' (Page 10)
+📝 H3: '3.2 Content...' (Page 10)
+📝 H4: 'Overview...' (Page 11)
+📝 H4: 'Overview...' (Page 12)
+📝 H2: '4. References...' (Page 12)
+📝 H3: '4.1 Trademarks...' (Page 12)
+📝 H3: '4.2 Documents and Web Sites...' (Page 12)
+📝 H4: 'Identifier...' (Page 12)
+🔧 HIERARCHY CORRECTION: 'Overview...' H4 → H2
+🔧 HIERARCHY CORRECTION: 'Overview...' H4 → H3
+🔧 HIERARCHY CORRECTION: 'Overview...' H4 → H3
+🔧 HIERARCHY CORRECTION: 'Table of Contents...' H4 → H3
+🔧 HIERARCHY CORRECTION: 'Overview...' H4 → H3
+🔧 HIERARCHY CORRECTION: 'Overview...' H4 → H3
+
+📊 FINAL HEADING STATISTICS:
+  H1: 1 headings
+  H2: 8 headings
+  H3: 15 headings
+  H4: 12 headings
+🎉 PHASE 3 COMPLETE: 36 headings assigned
+
+✅ SUCCESS: E0CCG5S312.pdf
+💾 Output: E0CCG5S312.json
+📊 Headings: 36
+⏱️ Time: 14.25s
+📋 Title: 'Overview...'
+
+================================================================================
+📄 PROCESSING FILE 3/5: E0H1CM114.pdf
+================================================================================
+
+============================================================
+📖 CHECKING FOR EMBEDDED TABLE OF CONTENTS (PyMuPDF get_toc)
+============================================================
+❌ No Table of Contents found using get_toc(). Proceeding with custom outline extraction.
+🔍 EXTRACTING CONTENT from document with 14 pages
+📄 Page 1: Found 22 text lines
+📄 Page 2: Found 37 text lines
+📄 Page 3: Found 44 text lines
+📄 Page 4: Found 40 text lines
+📄 Page 5: Found 42 text lines
+📄 Page 6: Found 44 text lines
+📄 Page 7: Found 38 text lines
+📄 Page 8: Found 17 text lines
+📄 Page 9: Found 40 text lines
+📄 Page 10: Found 56 text lines
+📄 Page 11: Found 49 text lines
+📄 Page 12: Found 54 text lines
+📄 Page 13: Found 20 text lines
+📄 Page 14: Found 47 text lines
+✅ EXTRACTION COMPLETE: 550 total text lines
+
+============================================================
+🎯 ENHANCED PHASE 1: TITLE EXTRACTION WITH PROXIMITY DETECTION
+============================================================
+📊 Analyzing 22 lines from first page
+📄 Document type detected: document
+📏 Font sizes (largest first): [32.0, 24.0, 20.0, 16.0, 10.0]
+📍 Lines in title zone (top 40%): 18
+🎯 CONDITION B: Clear font hierarchy detected
+🔍 Found 13 initial candidates
+✅ 13 candidates passed content validation
+📝 Grouped into 13 primary title lines
+
+🔍 PRIMARY PROXIMITY EXPANSION
+📦 Primary title bbox: [90.02429962158203, 156.5159454345703, 497.4065246582031, 201.91665649414062]
+🔗 EXPANDED PRIMARY: 13 original + 0 proximity = 13 total
+
+🔍 SEARCHING FOR SECONDARY TITLE COMPONENTS WITH PROXIMITY
+📏 Primary title font: 32.0pt
+📍 Expanded primary ends at: y=201.9
+📏 Second largest font: 24.0pt
+🎯 Found 2 secondary title candidates
+✅ Secondary candidate: 'To Present a Proposal for Developing'
+✅ Secondary candidate: 'the Business Plan for the Ontario'
+📝 Grouped into 2 secondary title lines
+
+🔍 SECONDARY PROXIMITY EXPANSION
+📏 Secondary proximity thresholds: vertical=12.5pt, horizontal=0.3
+📦 Secondary title bbox: [131.80059814453125, 248.39999389648438, 482.0615234375, 302.78399658203125]
+📍 Secondary proximity candidate: 'Digital Library...' (Font: 24.0pt)
+✅ Added secondary proximity line: 'Digital Library'
+🔗 EXPANDED SECONDARY: 2 original + 1 proximity = 3 total
+🔗 FINAL COMBINATION: 13 expanded primary + 3 expanded secondary
+
+✅ PROXIMITY-ENHANCED TITLE EXTRACTED with high confidence
+📝 Complete Title (16 lines): 'RFP: quest r To Present a for Developing the Business Plan for the Ontario Digital Library...'
+📍 Final comprehensive bbox: [90.02429962158203, 156.5159454345703, 497.4065246582031, 330.3840026855469]
+🧹 Skipped 18 lines before/overlapping complete title
+📊 Remaining lines for heading analysis: 532
+
+==================================================
+🔎 PHASE 2: HEADING CANDIDATE IDENTIFICATION
+==================================================
+📊 Most common font overall: 11.0pt
+📊 Identified body text font: 11.0pt
+📏 Heading font threshold: >= 11.0pt
+🎯 ALL potential heading font sizes found: [20.0, 16.0, 12.0]
+📊 Total unique fonts to check: 3 out of 7
+🔍 Identifying noise fonts (appear on >10 pages, <8.8pt)
+🗑️ NOISE FONT: 7.6pt (appears on 13/14 pages)
+📊 After removing noise fonts: 3 fonts remain
+🔍 Processing 532 lines across 14 pages...
+
+📄 Processing page 1 (4 lines)
+  🎯 F1 PASSED: 'March 21, 2003...' (Large Font: 20.0pt)
+    ❌ Vertical spacing check FAILED (above: 270.5pt, below: 329.4pt)
+    ❌ Indentation check FAILED (Diff: -146.6pt)
+  SKIPPED (F2 FAILED): 'March 21, 2003...'
+  SKIPPED (F1 FAILED): 'The Ontario Digital Library will make On...'
+  SKIPPED (F1 FAILED): 'all Ontario citizens have access to the ...'
+  SKIPPED (F1 FAILED): 'learners and effective contributors towa...'
+
+📄 Processing page 2 (37 lines)
+  🎯 F1 PASSED: 'Ontario’s Digital Library...' (Large Font: 20.0pt)
+    ✅ Vertical spacing check PASSED (above: 16.6pt > below: 3.5pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #1: 'Ontario’s Digital Library...' (Page 2, 20.0pt)
+
+  🎯 F1 PASSED: 'A Critical Component for Implementing On...' (Large Font: 16.0pt)
+    ✅ Vertical spacing check PASSED (above: 3.5pt > below: 0.5pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #2: 'A Critical Component for Implementing On...' (Page 2, 16.0pt)
+
+  🎯 F1 PASSED: 'Prosperity Strategy...' (Large Font: 16.0pt)
+    ❌ Vertical spacing check FAILED (above: 0.5pt, below: 39.2pt)
+    ✅ Indentation check PASSED (Diff: 6.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #3: 'Prosperity Strategy...' (Page 2, 16.0pt)
+
+  🎯 F1 PASSED: 'Summary...' (Large Font: 12.0pt)
+    ✅ Vertical spacing check PASSED (above: 39.2pt > below: 15.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #4: 'Summary...' (Page 2, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'The purpose of this Request for Proposal...'
+  SKIPPED (F1 FAILED): 'present a proposal for developing the bu...'
+  SKIPPED (F1 FAILED): 'The ODL will deliver high-quality librar...'
+  SKIPPED (F1 FAILED): 'assist people as they learn, work, and e...'
+  SKIPPED (F1 FAILED): 'developed is to document and clearly com...'
+  SKIPPED (F1 FAILED): 'how the ODL will be implemented, includi...'
+  SKIPPED (F1 FAILED): 'the financial plan for the implementatio...'
+  SKIPPED (F1 FAILED): 'the financial plan for the first 2 opera...'
+  SKIPPED (F1 FAILED): 'revenues, etc....'
+  SKIPPED (F1 FAILED): 'a financial forecast for the succeeding ...'
+  SKIPPED (F1 FAILED): 'the services and products to be delivere...'
+  SKIPPED (F1 FAILED): 'how the ODL will operate and be managed ...'
+  SKIPPED (F1 FAILED): 'who will be involved, and what their rol...'
+  SKIPPED (F1 FAILED): 'implementation and operational stages...'
+  SKIPPED (F1 FAILED): 'the marketing and communications plan fo...'
+  SKIPPED (F1 FAILED): 'This business plan must be completed and...'
+  SKIPPED (F1 FAILED): 'later than September 30, 2003...'
+  🎯 F1 PASSED: 'Timeline:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.4pt > below: 12.3pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #5: 'Timeline:...' (Page 2, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'Those firms/consultants intended to subm...'
+  SKIPPED (F1 FAILED): 'intention to do so in an e-mail to Micha...'
+  SKIPPED (F1 FAILED): 'Proposals may be e-mailed, mailed, couri...'
+  SKIPPED (F1 FAILED): '(lmoore@accessola.com), Executive Direct...'
+  SKIPPED (F1 FAILED): 'St., Suite 303, Toronto, ON  M5C 1M3. Pr...'
+  🎯 F1 PASSED: 'April 21, 2003....' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 12.4pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #6: 'April 21, 2003....' (Page 2, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'Those proposals that are short-listed wi...'
+  SKIPPED (F1 FAILED): 'of April 28, 2003. No presentation will ...'
+  SKIPPED (F1 FAILED): 'interview will be expected to discuss th...'
+  SKIPPED (F1 FAILED): 'committee....'
+  SKIPPED (F1 FAILED): 'Contracts with the firm/consultant will ...'
+  SKIPPED (F1 FAILED): 'commence as soon as possible thereafter....'
+  SKIPPED (Content FAILED): '2...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 2: Found 6 heading candidates
+
+📄 Processing page 3 (44 lines)
+  SKIPPED (F1 FAILED): 'Please note that we reserve the right no...'
+  SKIPPED (F1 FAILED): 'seek further response to these Terms of ...'
+  SKIPPED (F1 FAILED): 'If you require further information or ha...'
+  SKIPPED (F1 FAILED): 'mail (mridley@uoguelph.ca) only by 3:00 ...'
+  SKIPPED (F1 FAILED): 'responses will be shared with those who ...'
+  SKIPPED (F1 FAILED): 'proposal. Please note, that firms/consul...'
+  SKIPPED (F1 FAILED): 'Ridley by April 11th that they will be s...'
+  SKIPPED (F1 FAILED): 'information or question responses....'
+  🎯 F1 PASSED: 'Background...' (Large Font: 12.0pt)
+    ✅ Vertical spacing check PASSED (above: 21.1pt > below: 16.1pt)
+    ❌ Indentation check FAILED (Diff: -6.0pt)
+  🎯 F2 PASSED: Vertical Spacing
+  ✅ CANDIDATE #7: 'Background...' (Page 3, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'First, some background on the ODL. For t...'
+  SKIPPED (F1 FAILED): 'has acted as a catalyst, bringing togeth...'
+  SKIPPED (F1 FAILED): 'Digital Library (ODL). These stakeholder...'
+  SKIPPED (F1 FAILED): 'college, and school libraries, as well a...'
+  SKIPPED (F1 FAILED): 'Libraries that serve very different clie...'
+  SKIPPED (F1 FAILED): 'seamless access to quality electronic li...'
+  SKIPPED (F1 FAILED): 'able to explore a topic at school, use t...'
+  SKIPPED (F1 FAILED): 'home or at a public library), enter coll...'
+  SKIPPED (F1 FAILED): 'electronic resources that are still avai...'
+  SKIPPED (F1 FAILED): 'skills and resources at work or at home....'
+  SKIPPED (F1 FAILED): 'We are moving into a period of convergen...'
+  SKIPPED (F1 FAILED): 'commercial products as individual librar...'
+  SKIPPED (F1 FAILED): 'money wisely. The provincial government ...'
+  SKIPPED (F1 FAILED): 'all Ontarians with a stable, high-speed ...'
+  SKIPPED (F1 FAILED): 'great deal of work needed to improve thi...'
+  SKIPPED (F1 FAILED): 'best to exploit communications technolog...'
+  SKIPPED (F1 FAILED): 'content infrastructure needed to support...'
+  SKIPPED (F1 FAILED): 'The concept of an ODL is a key element i...'
+  SKIPPED (F1 FAILED): 'envision and attain Ontario’s economic g...'
+  SKIPPED (F1 FAILED): 'Board. The OJIB strategic plan recommend...'
+  SKIPPED (F1 FAILED): 'workplaces, new sources of information a...'
+  SKIPPED (F1 FAILED): 'that and much more. The ODL will connect...'
+  SKIPPED (F1 FAILED): 'leverage this investment to help connect...'
+  SKIPPED (F1 FAILED): 'they make decisions, solve problems and ...'
+  SKIPPED (F1 FAILED): 'Libraries have long been a key delivery ...'
+  SKIPPED (F1 FAILED): 'delivery point to move closer to citizen...'
+  SKIPPED (F1 FAILED): 'rooms....'
+  SKIPPED (F1 FAILED): 'Libraries have a long tradition of using...'
+  SKIPPED (F1 FAILED): 'and of learning from others. The ODL is ...'
+  SKIPPED (F1 FAILED): 'Jurisdiction-wide digital libraries are ...'
+  SKIPPED (F1 FAILED): 'leading edge for Ontario but several jur...'
+  SKIPPED (F1 FAILED): 'digital libraries. We can learn from the...'
+  SKIPPED (Content FAILED): '3...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 3: Found 1 heading candidates
+
+📄 Processing page 4 (40 lines)
+  SKIPPED (F1 FAILED): 'was incorporated in 1997 as a province-w...'
+  SKIPPED (F1 FAILED): 'with its members to promote universal ac...'
+  SKIPPED (F1 FAILED): 'public, post-secondary, special, governm...'
+  SKIPPED (F1 FAILED): 'not include elementary or secondary scho...'
+  SKIPPED (F1 FAILED): 'proposing for ODL is comparable to TAL‘s...'
+  SKIPPED (F1 FAILED): 'years. TAL’s implementation plan was sup...'
+  SKIPPED (F1 FAILED): 'funding, spread over three years, later ...'
+  SKIPPED (F1 FAILED): 'Alberta’s population 30% of Ontario’s, T...'
+  SKIPPED (F1 FAILED): 'schools as partners; it has 250 member l...'
+  SKIPPED (F1 FAILED): '10,000,000 Ontarians, with more than 500...'
+  SKIPPED (F1 FAILED): 'learn from TAL’s practices, the scope of...'
+  SKIPPED (F1 FAILED): 'TAL....'
+  SKIPPED (F1 FAILED): 'The ODL will be a partnership-based orga...'
+  SKIPPED (F1 FAILED): 'services and resources to the citizens o...'
+  SKIPPED (F1 FAILED): 'common resources The ODL will recognize ...'
+  SKIPPED (F1 FAILED): 'libraries, school libraries, college and...'
+  SKIPPED (F1 FAILED): 'envisions a digital network of informati...'
+  SKIPPED (Content FAILED): 'there is mutual benefit and to support t...'
+  SKIPPED (F1 FAILED): 'The principles which will define and gui...'
+  🎯 F1 PASSED: 'Equitable access for all Ontarians:...' (Style)
+    ❌ Vertical spacing check FAILED (above: 12.3pt, below: 12.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #8: 'Equitable access for all Ontarians:...' (Page 4, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'We will bring consistent, high-quality e...'
+  SKIPPED (F1 FAILED): 'Ontario citizens...'
+  SKIPPED (F1 FAILED): 'We will eliminate barriers to the access...'
+  SKIPPED (F1 FAILED): 'services for library clients....'
+  🎯 F1 PASSED: 'Shared decision-making and accountabilit...' (Style)
+    ❌ Vertical spacing check FAILED (above: 12.3pt, below: 12.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #9: 'Shared decision-making and accountabilit...' (Page 4, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'We will facilitate consensus among membe...'
+  SKIPPED (F1 FAILED): 'licenses and services...'
+  SKIPPED (F1 FAILED): 'We will balance the interests and realit...'
+  SKIPPED (F1 FAILED): 'communities and institutions....'
+  🎯 F1 PASSED: 'Shared governance structure:...' (Style)
+    ❌ Vertical spacing check FAILED (above: 12.3pt, below: 12.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #10: 'Shared governance structure:...' (Page 4, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'We will share decision-making in order t...'
+  SKIPPED (F1 FAILED): 'We will work based on an underlying assu...'
+  🎯 F1 PASSED: 'Shared funding:...' (Style)
+    ❌ Vertical spacing check FAILED (above: 12.3pt, below: 12.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #11: 'Shared funding:...' (Page 4, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'We will leverage provincial, institution...'
+  SKIPPED (F1 FAILED): 'and put Ontario dollars to work for ever...'
+  SKIPPED (F1 FAILED): 'We will be willing to pool talents and d...'
+  SKIPPED (F1 FAILED): 'truly greater than those that can be mai...'
+  SKIPPED (Content FAILED): '4...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 4: Found 4 heading candidates
+
+📄 Processing page 5 (42 lines)
+  🎯 F1 PASSED: 'Local points of entry:...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.1pt, below: 13.0pt)
+    ✅ Indentation check PASSED (Diff: 24.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #12: 'Local points of entry:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'We will provide the licenses, infrastruc...'
+  SKIPPED (F1 FAILED): 'libraries to provide exceptional service...'
+  SKIPPED (F1 FAILED): 'providing the underpinning, not overshad...'
+  SKIPPED (F1 FAILED): 'Services envisioned for the ODL’s includ...'
+  🎯 F1 PASSED: 'Access:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 13.0pt > below: 0.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #13: 'Access:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'to the “deep” web (i.e. Commercial, purc...'
+  SKIPPED (F1 FAILED): 'to credible web sites and electronic res...'
+  SKIPPED (F1 FAILED): 'to digital government information...'
+  SKIPPED (F1 FAILED): 'to local digital collections...'
+  🎯 F1 PASSED: 'Guidance and Advice:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 13.0pt > below: 0.3pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #14: 'Guidance and Advice:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'to support e-learning...'
+  SKIPPED (F1 FAILED): 'to support citizens, in real-time, as th...'
+  SKIPPED (F1 FAILED): 'to assist citizens as they use web-links...'
+  🎯 F1 PASSED: 'Training:...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 0.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #15: 'Training:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'for library workers...'
+  SKIPPED (F1 FAILED): 'for the general public...'
+  🎯 F1 PASSED: 'Provincial Purchasing & Licensing:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 13.0pt > below: 0.3pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #16: 'Provincial Purchasing & Licensing:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'of electronic content on a consortia bas...'
+  🎯 F1 PASSED: 'Technological Support:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 13.0pt > below: 0.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #17: 'Technological Support:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'of common standards for the preservation...'
+  SKIPPED (F1 FAILED): 'of a common interface to ODL resources a...'
+  SKIPPED (F1 FAILED): 'library web sites...'
+  SKIPPED (F1 FAILED): 'What could the ODL really mean?...'
+  🎯 F1 PASSED: 'For each Ontario citizen it could mean:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.0pt > below: 0.5pt)
+    ✅ Indentation check PASSED (Diff: 72.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #18: 'For each Ontario citizen it could mean:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'One local point of entry to access seaml...'
+  SKIPPED (F1 FAILED): 'resources for their personal, educationa...'
+  SKIPPED (F1 FAILED): 'Access to credible, high-quality, user-f...'
+  SKIPPED (F1 FAILED): 'community, school, or academic library;...'
+  SKIPPED (F1 FAILED): 'Confidence that the electronic services ...'
+  SKIPPED (F1 FAILED): '– are using are safe, valid, and bringin...'
+  SKIPPED (F1 FAILED): 'perspectives;...'
+  SKIPPED (F1 FAILED): 'Electronic information and tools that en...'
+  SKIPPED (F1 FAILED): 'experience...'
+  🎯 F1 PASSED: 'For each Ontario student it could mean:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.2pt > below: 0.5pt)
+    ✅ Indentation check PASSED (Diff: 72.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #19: 'For each Ontario student it could mean:...' (Page 5, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'One local point of entry to quality, cur...'
+  SKIPPED (F1 FAILED): 'resources and services...'
+  SKIPPED (F1 FAILED): 'Connection to their individual education...'
+  SKIPPED (F1 FAILED): 'elementary, secondary or post-secondary ...'
+  SKIPPED (Content FAILED): '5...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 5: Found 8 heading candidates
+
+📄 Processing page 6 (44 lines)
+  SKIPPED (F1 FAILED): 'Confidence that the services and resourc...'
+  SKIPPED (F1 FAILED): 'available when they need them and adapta...'
+  🎯 F1 PASSED: 'For each Ontario library it could mean:...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.9pt > below: 0.5pt)
+    ✅ Indentation check PASSED (Diff: 72.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #20: 'For each Ontario library it could mean:...' (Page 6, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'One point of entry for themselves and th...'
+  SKIPPED (F1 FAILED): 'resources and services that support and ...'
+  SKIPPED (F1 FAILED): 'and services...'
+  SKIPPED (F1 FAILED): 'The opportunity to show case their local...'
+  SKIPPED (F1 FAILED): 'expertise...'
+  SKIPPED (F1 FAILED): 'The opportunity to gain from the provinc...'
+  SKIPPED (F1 FAILED): 'to provide a seamless gateway to digital...'
+  🎯 F1 PASSED: 'For the Ontario government it could mean...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.9pt > below: 0.4pt)
+    ✅ Indentation check PASSED (Diff: 72.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #21: 'For the Ontario government it could mean...' (Page 6, 11.0pt)
+
+  SKIPPED (F1 FAILED): 'A point of entry to information services...'
+  SKIPPED (F1 FAILED): 'connecting to portal initiatives....'
+  SKIPPED (F1 FAILED): 'Support of the Ontario E-Learning strate...'
+  SKIPPED (F1 FAILED): 'library initiative that positions Ontari...'
+  SKIPPED (F1 FAILED): 'Improved access and flexibility for all ...'
+  SKIPPED (F1 FAILED): '(supports Ontario’s lifelong learning st...'
+  SKIPPED (F1 FAILED): 'The opportunity to address emerging job ...'
+  SKIPPED (F1 FAILED): 'to work and job to job transitions with ...'
+  SKIPPED (F1 FAILED): 'knowledge supports and tools...'
+  SKIPPED (F1 FAILED): 'ODL will be an incorporated non-profit o...'
+  SKIPPED (F1 FAILED): 'by a voting membership. The Board will i...'
+  SKIPPED (F1 FAILED): 'envision a governance model similar to t...'
+  SKIPPED (F1 FAILED): 'More information regarding the envisione...'
+  SKIPPED (F1 FAILED): 'ODL can be found in the appendixes....'
+  🎯 F1 PASSED: 'The Business Plan to be Developed...' (Large Font: 12.0pt)
+    ❌ Vertical spacing check FAILED (above: 21.1pt, below: 27.6pt)
+    ❌ Indentation check FAILED (Diff: -6.0pt)
+  SKIPPED (F2 FAILED): 'The Business Plan to be Developed...'
+  SKIPPED (F1 FAILED): 'The business plan which needs to be deve...'
+  SKIPPED (F1 FAILED): 'that documents and clearly communicates ...'
+  SKIPPED (F1 FAILED): 'structures, as well as implementation pl...'
+  SKIPPED (F1 FAILED): '2007. The planning process must also sec...'
+  SKIPPED (F1 FAILED): 'represented on the Steering Committee....'
+  SKIPPED (F1 FAILED): 'Specifically, the business plan must inc...'
+  SKIPPED (F1 FAILED): 'how the ODL will be implemented, includi...'
+  SKIPPED (F1 FAILED): 'the financial plan for the implementatio...'
+  SKIPPED (F1 FAILED): 'the financial plan for the first 2 opera...'
+  SKIPPED (F1 FAILED): 'revenues, etc....'
+  SKIPPED (F1 FAILED): 'a financial forecast for the succeeding ...'
+  SKIPPED (F1 FAILED): 'the services and products to be delivere...'
+  SKIPPED (F1 FAILED): 'how the ODL will operate and be managed ...'
+  SKIPPED (F1 FAILED): 'who will be involved, and what their rol...'
+  SKIPPED (F1 FAILED): 'implementation and operational stages...'
+  SKIPPED (Content FAILED): '6...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 6: Found 2 heading candidates
+
+📄 Processing page 7 (38 lines)
+  SKIPPED (F1 FAILED): 'the marketing and communications plan fo...'
+  SKIPPED (F1 FAILED): 'the commitment of all stakeholders to th...'
+  SKIPPED (F1 FAILED): 'The process of developing this business ...'
+  SKIPPED (F1 FAILED): 'all stakeholders are engaged in creating...'
+  🎯 F1 PASSED: 'indicate how this consultative process w...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 13.0pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Indentation
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'indicate how this consultative process w...'
+  SKIPPED (F1 FAILED): 'The business plan for the ODL must addre...'
+  SKIPPED (Content FAILED): 'enormous differences in the financial re...'
+  SKIPPED (F1 FAILED): 'similar services. Some post-secondary an...'
+  SKIPPED (F1 FAILED): 'areas, have the facilities, funding and ...'
+  SKIPPED (F1 FAILED): 'patrons with electronic services and res...'
+  SKIPPED (F1 FAILED): 'not. The proposal must indicate how thes...'
+  🎯 F1 PASSED: 'Milestones...' (Large Font: 12.0pt)
+    ✅ Vertical spacing check PASSED (above: 33.8pt > below: 15.9pt)
+    ✅ Indentation check PASSED (Diff: 12.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #22: 'Milestones...' (Page 7, 12.0pt)
+
+  🎯 F1 PASSED: '1) A preliminary report will be issued d...' (Style)
+    ✅ Vertical spacing check PASSED (above: 15.9pt > below: 12.3pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+ ✅ SKIPPED (Potential Body Text - Mixed Style Heuristic): '1) A preliminary report will be issued d...'
+  🎯 F1 PASSED: '2) It is expected that an Interim Report...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.3pt > below: 0.4pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+ ✅ SKIPPED (Potential Body Text - Mixed Style Heuristic): '2) It is expected that an Interim Report...'
+  🎯 F1 PASSED: 'community will be available by August 1,...' (Style)
+    ✅ Vertical spacing check PASSED (above: 0.4pt > below: 0.3pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'community will be available by August 1,...'
+  🎯 F1 PASSED: 'for responses to be evaluated....' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 12.4pt)
+    ❌ Indentation check FAILED (Diff: -18.0pt)
+  SKIPPED (F2 FAILED): 'for responses to be evaluated....'
+  🎯 F1 PASSED: '3) The business plan must be completed a...' (Style)
+    ✅ Vertical spacing check PASSED (above: 12.4pt > below: 0.3pt)
+    ✅ Indentation check PASSED (Diff: 18.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+ ✅ SKIPPED (Potential Body Text - Mixed Style Heuristic): '3) The business plan must be completed a...'
+  🎯 F1 PASSED: 'no later than September 30, 2003....' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 21.1pt)
+    ❌ Indentation check FAILED (Diff: -26.5pt)
+  SKIPPED (F2 FAILED): 'no later than September 30, 2003....'
+  🎯 F1 PASSED: 'Approach and Specific Proposal Requireme...' (Large Font: 12.0pt)
+    ✅ Vertical spacing check PASSED (above: 21.1pt > below: 16.1pt)
+    ❌ Indentation check FAILED (Diff: -9.5pt)
+  🎯 F2 PASSED: Vertical Spacing
+  ✅ CANDIDATE #23: 'Approach and Specific Proposal Requireme...' (Page 7, 12.0pt)
+
+  SKIPPED (F1 FAILED): 'The firm/consultant (or proposed team of...'
+  SKIPPED (F1 FAILED): 'the ODL Steering Committee. Terms of ref...'
+  SKIPPED (F1 FAILED): 'Given the consultative nature of this bu...'
+  SKIPPED (F1 FAILED): 'be expected to travel and communicate re...'
+  SKIPPED (F1 FAILED): 'electronic resource publishers/vendors....'
+  SKIPPED (F1 FAILED): 'The proposal should include the followin...'
+  SKIPPED (F1 FAILED): 'a) name of the firm/consultant...'
+  SKIPPED (F1 FAILED): 'b) names of those individuals who will b...'
+  SKIPPED (F1 FAILED): 'responsibilities on this project and rel...'
+  SKIPPED (F1 FAILED): 'c) description of similar engagements th...'
+  SKIPPED (F1 FAILED): 'planning and building stakeholder commit...'
+  SKIPPED (F1 FAILED): 'd) references with details of work compl...'
+  SKIPPED (F1 FAILED): 'e) description of the approach that will...'
+  SKIPPED (F1 FAILED): 'including a timeline...'
+  SKIPPED (F1 FAILED): 'f) cost to complete the study including ...'
+  SKIPPED (F1 FAILED): 'structure...'
+  SKIPPED (Content FAILED): '7...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 7: Found 2 heading candidates
+
+📄 Processing page 8 (17 lines)
+  🎯 F1 PASSED: 'Evaluation and Awarding of Contract...' (Large Font: 12.0pt)
+    ❌ Vertical spacing check FAILED (above: 9.0pt, below: 24.9pt)
+    ❌ Indentation check FAILED (Diff: -6.0pt)
+  SKIPPED (F2 FAILED): 'Evaluation and Awarding of Contract...'
+  SKIPPED (F1 FAILED): 'The contract will be awarded to the bidd...'
+  SKIPPED (F1 FAILED): 'not necessarily be awarded to the lowest...'
+  SKIPPED (F1 FAILED): 'any of the bidders responding to this RF...'
+  SKIPPED (F1 FAILED): 'Specifically, proposals will be evaluate...'
+  SKIPPED (F1 FAILED): 'Quality of the proposal /approach outlin...'
+  SKIPPED (F1 FAILED): 'Demonstrated experience...'
+  SKIPPED (F1 FAILED): 'Cost, including expenses...'
+  SKIPPED (Content FAILED): 'Timeline and projected completion date...'
+  SKIPPED (F1 FAILED): 'Other relevant factors as determined by ...'
+  SKIPPED (F1 FAILED): 'Questions regarding this RFP should be d...'
+  SKIPPED (F1 FAILED): '(mridley@uoguelph.ca)....'
+  SKIPPED (F1 FAILED): 'Bidders are asked not to contact any oth...'
+  SKIPPED (F1 FAILED): 'Committee....'
+  SKIPPED (Content FAILED): '8...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+
+📄 Processing page 9 (40 lines)
+  🎯 F1 PASSED: 'Appendix A:  ODL Envisioned Phases & Fun...' (Large Font: 12.0pt)
+    ✅ Vertical spacing check PASSED (above: 35.5pt > below: 15.4pt)
+    ❌ Indentation check FAILED (Diff: -0.0pt)
+  🎯 F2 PASSED: Vertical Spacing
+  ✅ CANDIDATE #24: 'Appendix A:  ODL Envisioned Phases & Fun...' (Page 9, 12.0pt)
+
+  🎯 F1 PASSED: 'Phase I:  Business Planning...' (Style)
+    ✅ Vertical spacing check PASSED (above: 15.4pt > below: 11.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #25: 'Phase I:  Business Planning...' (Page 9, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Timeline: March 2003 – September 2003...'
+  SKIPPED (F1 FAILED): 'Funding Requested: ~$100,000 jointly fun...'
+  SKIPPED (F1 FAILED): 'Result: The ODL business plan...'
+  SKIPPED (F1 FAILED): 'The first phase will be to build the ODL...'
+  SKIPPED (F1 FAILED): 'funding and governance structures, as we...'
+  SKIPPED (F1 FAILED): 'the full commitment of all stakeholders ...'
+  SKIPPED (F1 FAILED): 'Given the number and diversity of stakeh...'
+  SKIPPED (F1 FAILED): 'consultative approach. To ensure that th...'
+  SKIPPED (F1 FAILED): 'of all stakeholders it must have compete...'
+  SKIPPED (F1 FAILED): 'communication components so critical in ...'
+  🎯 F1 PASSED: 'Phase II: Implementing and Transitioning...' (Style)
+    ✅ Vertical spacing check PASSED (above: 23.2pt > below: 11.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #26: 'Phase II: Implementing and Transitioning...' (Page 9, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Timeline: April 2004 – December 2006...'
+  SKIPPED (F1 FAILED): 'Funding Requested: Funding from other st...'
+  🎯 F1 PASSED: 'funding of up to $50 Million (over 3 yea...' (Style)
+    ✅ Vertical spacing check PASSED (above: 0.4pt > below: 0.3pt)
+    ❌ Indentation check FAILED (Diff: -0.0pt)
+  🎯 F2 PASSED: Vertical Spacing
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'funding of up to $50 Million (over 3 yea...'
+  🎯 F1 PASSED: 'stakeholders and other interested partie...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 11.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Indentation
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'stakeholders and other interested partie...'
+  SKIPPED (Content FAILED): 'Result: The ODL is implemented and valid...'
+  SKIPPED (F1 FAILED): 'The second phase will be to implement th...'
+  SKIPPED (F1 FAILED): 'that for ODL to be optimally successful ...'
+  SKIPPED (F1 FAILED): 'providing services. The transition must ...'
+  SKIPPED (F1 FAILED): 'respond to current challenges. This impl...'
+  SKIPPED (F1 FAILED): 'library stakeholders and other intereste...'
+  SKIPPED (F1 FAILED): 'The seed money requested will allow libr...'
+  SKIPPED (F1 FAILED): 'and content of the ODL is created and se...'
+  🎯 F1 PASSED: 'is every indication that existing budget...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.3pt, below: 0.4pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Indentation
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'is every indication that existing budget...'
+  SKIPPED (F1 FAILED): 'recommendations. During this phase the p...'
+  SKIPPED (F1 FAILED): 'mechanisms of the ODL will be put in pla...'
+  SKIPPED (F1 FAILED): 'Information resources will be identified...'
+  SKIPPED (F1 FAILED): 'will be made deployed through the ODL. R...'
+  SKIPPED (F1 FAILED): 'achieving its objectives and is accounta...'
+  🎯 F1 PASSED: 'Phase III: Operating and Growing the ODL...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.7pt, below: 11.9pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #27: 'Phase III: Operating and Growing the ODL...' (Page 9, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Timeline: January 2007 -...'
+  SKIPPED (F1 FAILED): 'Funding: $50 Million annually ($35 Milli...'
+  SKIPPED (F1 FAILED): 'Result: The ODL is fully operational and...'
+  SKIPPED (F1 FAILED): 'In the third phase the ODL moves into th...'
+  SKIPPED (Content FAILED): 'of the initiative and libraries will con...'
+  SKIPPED (Content FAILED): '9...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 9: Found 4 heading candidates
+
+📄 Processing page 10 (56 lines)
+  SKIPPED (F1 FAILED): 'capabilities. The challenge is to secure...'
+  SKIPPED (F1 FAILED): 'to enhance the ODL....'
+  SKIPPED (F1 FAILED): 'The ongoing funding of the ODL will be b...'
+  SKIPPED (F1 FAILED): '(i.e. government, libraries, donors, pub...'
+  SKIPPED (F1 FAILED): 'expected to make financial contributions...'
+  SKIPPED (F1 FAILED): 'ODL on Ontario’s economy, society and le...'
+  SKIPPED (F1 FAILED): '(university, colleges, public libraries ...'
+  SKIPPED (F1 FAILED): 'The proposed funding model requires a co...'
+  SKIPPED (F1 FAILED): 'the ODL matures a growing share of ODL f...'
+  SKIPPED (F1 FAILED): 'sources. During the 3-year implementatio...'
+  SKIPPED (F1 FAILED): 'enable ongoing funding contributions to ...'
+  SKIPPED (F1 FAILED): 'endowment and secure public and private ...'
+  SKIPPED (F1 FAILED): 'outlines the model. This model is based ...'
+  SKIPPED (F1 FAILED): '1. that ODL expenditures will increase b...'
+  SKIPPED (F1 FAILED): '2. that government funding will decrease...'
+  SKIPPED (F1 FAILED): '3. that library contributions, endowment...'
+  SKIPPED (F1 FAILED): 'during the same period...'
+  🎯 F1 PASSED: 'OVERVIEW OF ODL FUNDING MODEL...' (Style)
+    ✅ Vertical spacing check PASSED (above: 17.8pt > below: 12.3pt)
+    ❌ Indentation check FAILED (Diff: -131.4pt)
+  🎯 F2 PASSED: Vertical Spacing
+  ✅ CANDIDATE #28: 'OVERVIEW OF ODL FUNDING MODEL...' (Page 10, 10.0pt)
+
+  🎯 F1 PASSED: 'Funding Source...' (Style, Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 199.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #29: 'Funding Source...' (Page 10, 12.0pt)
+
+  SKIPPED (Content FAILED): '2007...'
+  SKIPPED (Content FAILED): '2017...'
+  SKIPPED (F1 FAILED): 'Government...'
+  SKIPPED (F1 FAILED): '$35M (70%)...'
+  SKIPPED (F1 FAILED): '$33.75M (45%)...'
+  SKIPPED (F1 FAILED): 'Libraries...'
+  SKIPPED (F1 FAILED): '$10M (20%)...'
+  SKIPPED (F1 FAILED): '$22.5M (30%)...'
+  SKIPPED (F1 FAILED): 'Endowment...'
+  SKIPPED (F1 FAILED): '$4.5M (9%)...'
+  SKIPPED (F1 FAILED): '$15M (20%)...'
+  SKIPPED (F1 FAILED): 'Gifts/In-Kind...'
+  SKIPPED (F1 FAILED): '$0.5M (1%)...'
+  SKIPPED (F1 FAILED): '$3.75M (5%)...'
+  🎯 F1 PASSED: 'TOTAL ANNUAL...' (Style)
+    ✅ Indentation check PASSED (Diff: 199.9pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #30: 'TOTAL ANNUAL...' (Page 10, 10.0pt)
+
+  SKIPPED (F1 FAILED): '$50M...'
+  SKIPPED (F1 FAILED): '$75M...'
+  SKIPPED (F1 FAILED): 'While the private sector will be invited...'
+  SKIPPED (F1 FAILED): 'kind contributions, the ODL will also ex...'
+  SKIPPED (F1 FAILED): 'of the ODL and help to offset operating ...'
+  SKIPPED (F1 FAILED): 'A $50M budget leverages the consortium b...'
+  SKIPPED (F1 FAILED): 'prices for information resources, the wi...'
+  SKIPPED (F1 FAILED): 'this nature will ensure a core digital c...'
+  SKIPPED (F1 FAILED): 'amount of the wide and diverse informati...'
+  SKIPPED (F1 FAILED): 'of the nature of the ODL digital collect...'
+  🎯 F1 PASSED: 'represent an investment of $5.00 per cit...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.4pt, below: 11.8pt)
+    ✅ Indentation check PASSED (Diff: 0.0pt)
+  🎯 F2 PASSED: Indentation
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'represent an investment of $5.00 per cit...'
+  SKIPPED (F1 FAILED): 'It is important to recognize that every ...'
+  SKIPPED (F1 FAILED): 'double benefit: it supports a province-w...'
+  SKIPPED (F1 FAILED): 'strengthens every local library in Ontar...'
+  SKIPPED (F1 FAILED): 'that enhance local services. This multip...'
+  🎯 F1 PASSED: 'on investment is worth $2 of value for O...' (Style)
+    ❌ Vertical spacing check FAILED (above: 0.4pt, below: 105.8pt)
+    ✅ Indentation check PASSED (Diff: 420.8pt)
+  🎯 F2 PASSED: Indentation
+ 🤦‍♀️ SKIPPED (Lowercase Filter FAILED): 'on investment is worth $2 of value for O...'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Content FAILED): '10...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 10: Found 3 heading candidates
+
+📄 Processing page 11 (49 lines)
+  🎯 F1 PASSED: 'Appendix B:...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 102.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #31: 'Appendix B:...' (Page 11, 12.0pt)
+
+  🎯 F1 PASSED: 'ODL Steering Committee Terms of Referenc...' (Large Font: 12.0pt)
+    ❌ Vertical spacing check FAILED (above: -16.9pt, below: 27.4pt)
+    ❌ Indentation check FAILED (Diff: -108.0pt)
+  SKIPPED (F2 FAILED): 'ODL Steering Committee Terms of Referenc...'
+  🎯 F1 PASSED: '1. Preamble...' (Style)
+    ✅ Vertical spacing check PASSED (above: 27.4pt > below: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Vertical Spacing & Indentation
+  ✅ CANDIDATE #32: '1. Preamble...' (Page 11, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Implementation of the Ontario Digital Li...'
+  SKIPPED (Content FAILED): 'and supported by its diverse stakeholder...'
+  SKIPPED (F1 FAILED): 'development planning and commitment proc...'
+  SKIPPED (F1 FAILED): 'accountable to potential ODL funders inc...'
+  🎯 F1 PASSED: '2. Terms of Reference...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.8pt, below: 11.9pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #33: '2. Terms of Reference...' (Page 11, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'In broad terms, the ODL Business Plan St...'
+  SKIPPED (F1 FAILED): 'business plan, securing sector support, ...'
+  SKIPPED (F1 FAILED): 'responsibilities include:...'
+  SKIPPED (F1 FAILED): '2.1 developing a detailed business plan ...'
+  SKIPPED (F1 FAILED): 'governance, management, funding model an...'
+  SKIPPED (F1 FAILED): 'staffing, and evaluation;...'
+  SKIPPED (F1 FAILED): '2.2 consulting with and reporting to sta...'
+  SKIPPED (F1 FAILED): 'communication, and to ensure meaningful ...'
+  SKIPPED (F1 FAILED): 'making;...'
+  SKIPPED (F1 FAILED): '2.3 recruiting and managing the business...'
+  SKIPPED (F1 FAILED): '2.4 defining terms of reference and reso...'
+  SKIPPED (F1 FAILED): 'expenditures;...'
+  SKIPPED (F1 FAILED): '2.5 serving as a focus group for busines...'
+  SKIPPED (F1 FAILED): '2.6 providing signoff for business plann...'
+  SKIPPED (F1 FAILED): '2.7 securing commitment from library, go...'
+  SKIPPED (F1 FAILED): 'of the business plan;...'
+  SKIPPED (F1 FAILED): '2.8 presenting the business plan to fund...'
+  SKIPPED (F1 FAILED): '2.9 undertaking advocacy efforts to prom...'
+  SKIPPED (F1 FAILED): 'and education communities....'
+  🎯 F1 PASSED: '3. Membership...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.8pt, below: 11.9pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #34: '3. Membership...' (Page 11, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Each of the four sectors, Schools, Colle...'
+  SKIPPED (F1 FAILED): 'representatives to the steering committe...'
+  SKIPPED (F1 FAILED): '3.1 Schools:...'
+  SKIPPED (F1 FAILED): '- Ontario School Library Association (OS...'
+  SKIPPED (F1 FAILED): 'Coordinators of Ontario (TALCO)  (Execut...'
+  SKIPPED (F1 FAILED): 'consultation with TALCO)...'
+  SKIPPED (F1 FAILED): '3.2 Universities:...'
+  SKIPPED (F1 FAILED): '- Ontario Council of University Librarie...'
+  SKIPPED (F1 FAILED): '3.3 Colleges:...'
+  SKIPPED (F1 FAILED): '- Bibliocentre, and Heads of Libraries a...'
+  SKIPPED (F1 FAILED): '3.4 Public libraries:...'
+  SKIPPED (F1 FAILED): '- Administrators of Medium-sized Public ...'
+  SKIPPED (F1 FAILED): 'Urban Public Libraries of Ontario (ARUPL...'
+  SKIPPED (F1 FAILED): 'Ontario (ASPLO) and Chief Executives of ...'
+  SKIPPED (F1 FAILED): '(Executives of AMPLO, ARUPLO, ASPLO and ...'
+  SKIPPED (Content FAILED): '11...'
+  SKIPPED (Content FAILED): '11...'
+  SKIPPED (Content FAILED): '11...'
+  SKIPPED (Content FAILED): '11...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 11: Found 4 heading candidates
+
+📄 Processing page 12 (54 lines)
+  SKIPPED (F1 FAILED): '3.5 Ontario Library Association represen...'
+  SKIPPED (F1 FAILED): '- Role of the OLA ex-officio member: To ...'
+  SKIPPED (F1 FAILED): 'the OLA Board, and to assist the chair w...'
+  SKIPPED (F1 FAILED): 'the preparation of the business plan, fi...'
+  SKIPPED (F1 FAILED): '3.6 It is anticipated that as planning f...'
+  SKIPPED (F1 FAILED): 'discretion, call on invited experts to a...'
+  🎯 F1 PASSED: '4. Appointment Criteria and Process...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.8pt, below: 12.5pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #35: '4. Appointment Criteria and Process...' (Page 12, 10.0pt)
+
+  SKIPPED (Content FAILED): '4.1...'
+  SKIPPED (F1 FAILED): 'Groups and organizations named in Sectio...'
+  SKIPPED (F1 FAILED): 'representatives to the Steering Committe...'
+  SKIPPED (Content FAILED): '4.2...'
+  SKIPPED (F1 FAILED): 'Desired characteristics for steering com...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Strategic thinkers;...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Committed to the concept of multi-sector...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Knowledgeable about digital libraries an...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Knowledgeable about government structure...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Respected by their communities; influent...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Able to take a consultative approach;...'
+  SKIPPED (Content FAILED): '•...'
+  SKIPPED (F1 FAILED): 'Able to devote time to Steering Committe...'
+  🎯 F1 PASSED: 'meetings plus 2-3 working days per month...' (Large Font: 12.0pt)
+    ❌ Vertical spacing check FAILED (above: 0.2pt, below: 11.9pt)
+    ❌ Indentation check FAILED (Diff: -36.0pt)
+  SKIPPED (F2 FAILED): 'meetings plus 2-3 working days per month...'
+  🎯 F1 PASSED: '5. Term...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.9pt, below: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #36: '5. Term...' (Page 12, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Expected term on the Steering Committee ...'
+  SKIPPED (F1 FAILED): 'business plan plus two months. This proc...'
+  🎯 F1 PASSED: '6. Chair...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.8pt, below: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #37: '6. Chair...' (Page 12, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'Chair will be appointed by the Board of ...'
+  SKIPPED (F1 FAILED): 'Role of the Chair:...'
+  SKIPPED (F1 FAILED): 'In addition to the characteristics for a...'
+  SKIPPED (F1 FAILED): 'working with the selected consultant(s),...'
+  SKIPPED (F1 FAILED): 'plan. The chair must be able to devote 5...'
+  SKIPPED (F1 FAILED): 'the business plan, and communications to...'
+  🎯 F1 PASSED: '7. Meetings...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.7pt, below: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #38: '7. Meetings...' (Page 12, 10.0pt)
+
+  SKIPPED (F1 FAILED): 'It is expected that in person meetings a...'
+  SKIPPED (F1 FAILED): 'conducted by e-mail, and teleconference....'
+  🎯 F1 PASSED: '8. Lines of Accountability and Communica...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.7pt, below: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #39: '8. Lines of Accountability and Communica...' (Page 12, 10.0pt)
+
+  SKIPPED (F1 FAILED): '8.1 The Steering Committee is accountabl...'
+  SKIPPED (F1 FAILED): 'funders....'
+  SKIPPED (F1 FAILED): '8.2 The role of the Ontario Library Asso...'
+  SKIPPED (F1 FAILED): 'ODL funders to finance the business plan...'
+  SKIPPED (F1 FAILED): 'disperse them for purposes as  directed ...'
+  SKIPPED (F1 FAILED): 'financial reports to the Steering Commit...'
+  SKIPPED (F1 FAILED): 'government reporting regulations for fun...'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Content FAILED): '12...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 12: Found 5 heading candidates
+
+📄 Processing page 13 (20 lines)
+  SKIPPED (F1 FAILED): '8.3 The Steering Committee is accountabl...'
+  SKIPPED (F1 FAILED): 'ongoing communications and consultation ...'
+  SKIPPED (F1 FAILED): 'is responsible for strong liaison with g...'
+  SKIPPED (F1 FAILED): 'Community Services Cluster, ADM’s and De...'
+  🎯 F1 PASSED: '9. Financial and Administrative Policies...' (Style)
+    ❌ Vertical spacing check FAILED (above: 11.8pt, below: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 5.8pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #40: '9. Financial and Administrative Policies...' (Page 13, 10.0pt)
+
+  SKIPPED (F1 FAILED): '9.1 Service on the Steering Committee is...'
+  SKIPPED (F1 FAILED): '9.2 Travel and meeting expenses for Stee...'
+  SKIPPED (F1 FAILED): 'policies of the Ontario Library Associat...'
+  SKIPPED (F1 FAILED): '9.3 Conflict of Interest:...'
+  SKIPPED (F1 FAILED): 'The ODL Steering Committee will function...'
+  SKIPPED (F1 FAILED): 'ensuring that members,  their immediate ...'
+  SKIPPED (F1 FAILED): 'not benefit financially from the decisio...'
+  SKIPPED (F1 FAILED): 'order of business, the Steering Committe...'
+  SKIPPED (F1 FAILED): 'statement and procedural guidelines that...'
+  SKIPPED (Content FAILED): '13...'
+  SKIPPED (Content FAILED): '13...'
+  SKIPPED (Content FAILED): '13...'
+  SKIPPED (Content FAILED): '13...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 13: Found 1 heading candidates
+
+📄 Processing page 14 (47 lines)
+  🎯 F1 PASSED: 'Appendix C:...' (Large Font: 12.0pt)
+    ✅ Indentation check PASSED (Diff: 102.0pt)
+  🎯 F2 PASSED: Indentation
+  ✅ CANDIDATE #41: 'Appendix C:...' (Page 14, 12.0pt)
+
+  🎯 F1 PASSED: 'ODL’s Envisioned Electronic Resources...' (Large Font: 12.0pt)
+    ❌ Vertical spacing check FAILED (above: -16.9pt, below: 27.5pt)
+    ❌ Indentation check FAILED (Diff: -102.0pt)
+  SKIPPED (F2 FAILED): 'ODL’s Envisioned Electronic Resources...'
+  SKIPPED (F1 FAILED): 'The purpose of the ODL is to provide equ...'
+  SKIPPED (F1 FAILED): 'collaboration and resource sharing. ODL ...'
+  SKIPPED (Content FAILED): 'a home page for local libraries - to org...'
+  SKIPPED (F1 FAILED): 'e-information resources to meet the need...'
+  SKIPPED (F1 FAILED): 'of their education, life and work. Some ...'
+  SKIPPED (F1 FAILED): '1. Reference Resources...'
+  SKIPPED (F1 FAILED): '- directories: companies, associations, ...'
+  SKIPPED (F1 FAILED): 'etc. etc....'
+  SKIPPED (F1 FAILED): '- almanacs, country information...'
+  SKIPPED (F1 FAILED): '- dictionaries, thesauri, encyclopedias...'
+  SKIPPED (F1 FAILED): '-consumer information...'
+  SKIPPED (F1 FAILED): '- phone books,...'
+  SKIPPED (F1 FAILED): '- travel guides, entertainment guides...'
+  SKIPPED (F1 FAILED): '- weather information...'
+  SKIPPED (F1 FAILED): '- media/newspapers...'
+  SKIPPED (F1 FAILED): '- leisure time, recreational activity gu...'
+  SKIPPED (F1 FAILED): '- indexing and abstracting services...'
+  SKIPPED (F1 FAILED): '- currency converters,...'
+  SKIPPED (F1 FAILED): '- virtual reference services...'
+  SKIPPED (F1 FAILED): '-vocational/career information...'
+  SKIPPED (F1 FAILED): '-internet search engines...'
+  SKIPPED (F1 FAILED): '-current awareness services...'
+  SKIPPED (F1 FAILED): '2. Subject Guides...'
+  SKIPPED (F1 FAILED): '-arts and humanities...'
+  SKIPPED (F1 FAILED): '- business and economics...'
+  SKIPPED (F1 FAILED): '- education...'
+  SKIPPED (F1 FAILED): '-recreation and sports...'
+  SKIPPED (F1 FAILED): '-entertainment - games, activities for k...'
+  SKIPPED (F1 FAILED): '-health information...'
+  SKIPPED (F1 FAILED): '-science and technology...'
+  SKIPPED (F1 FAILED): '-social sciences...'
+  SKIPPED (F1 FAILED): '-society and culture...'
+  SKIPPED (F1 FAILED): '3. Educational tool-kits...'
+  SKIPPED (F1 FAILED): '-guides to information gathering methodo...'
+  SKIPPED (F1 FAILED): '-study guides...'
+  SKIPPED (F1 FAILED): '-study skill development...'
+  SKIPPED (F1 FAILED): '-web-based curricula...'
+  SKIPPED (F1 FAILED): '-internet search guides...'
+  SKIPPED (F1 FAILED): '4. Journals, books, maps, music etc....'
+  SKIPPED (Content FAILED): '14...'
+  SKIPPED (Content FAILED): '14...'
+  SKIPPED (Content FAILED): '14...'
+  SKIPPED (Content FAILED): '14...'
+  SKIPPED (Noise Font): 'RFP: To Develop the Ontario Digital Libr...'
+  SKIPPED (Noise Font): 'March 2003...'
+📊 Page 14: Found 1 heading candidates
+
+📊 CANDIDATES BY FONT SIZE:
+  20.0pt: 1 candidates
+  16.0pt: 2 candidates
+  12.0pt: 8 candidates
+  11.0pt: 16 candidates
+  10.0pt: 14 candidates
+🎯 PHASE 2 COMPLETE: Found 41 total candidates
+📊 Covered 5 different font sizes
+
+==================================================
+🏷️ PHASE 3: H1-H4 LEVEL ASSIGNMENT
+==================================================
+📊 Found 5 unique font sizes in candidates
+📊 FONT SIZE RANKING (Font SIZE Priority):
+  1. 20.0pt - Prominence: 0.00, Count: 1, Bold: 0, Italic: 0
+  2. 16.0pt - Prominence: 0.00, Count: 2, Bold: 0, Italic: 0
+  3. 12.0pt - Prominence: 0.25, Count: 8, Bold: 1, Italic: 0
+  4. 11.0pt - Prominence: 2.62, Count: 16, Bold: 15, Italic: 12
+  5. 10.0pt - Prominence: 2.00, Count: 14, Bold: 14, Italic: 0
+🎯 H1 ASSIGNED: 20.0pt (largest font)
+🎯 H2 ASSIGNED: 16.0pt (significant drop from 20.0pt)
+🎯 H3 ASSIGNED: 12.0pt (significant drop from 16.0pt)
+🎯 H4 ASSIGNED: 11.0pt (smaller than 12.0pt)
+📝 H1: 'Ontario’s Digital Library...' (Page 2)
+📝 H2: 'A Critical Component for Implementing Ontario’s Ro...' (Page 2)
+📝 H2: 'Prosperity Strategy...' (Page 2)
+📝 H3: 'Summary...' (Page 2)
+📝 H4: 'Timeline:...' (Page 2)
+📝 H4: 'April 21, 2003....' (Page 2)
+📝 H3: 'Background...' (Page 3)
+📝 H4: 'Equitable access for all Ontarians:...' (Page 4)
+📝 H4: 'Shared decision-making and accountability:...' (Page 4)
+📝 H4: 'Shared governance structure:...' (Page 4)
+📝 H4: 'Shared funding:...' (Page 4)
+📝 H4: 'Local points of entry:...' (Page 5)
+📝 H4: 'Access:...' (Page 5)
+📝 H4: 'Guidance and Advice:...' (Page 5)
+📝 H4: 'Training:...' (Page 5)
+📝 H4: 'Provincial Purchasing & Licensing:...' (Page 5)
+📝 H4: 'Technological Support:...' (Page 5)
+📝 H4: 'For each Ontario citizen it could mean:...' (Page 5)
+📝 H4: 'For each Ontario student it could mean:...' (Page 5)
+📝 H4: 'For each Ontario library it could mean:...' (Page 6)
+📝 H4: 'For the Ontario government it could mean:...' (Page 6)
+📝 H3: 'Milestones...' (Page 7)
+📝 H3: 'Approach and Specific Proposal Requirements...' (Page 7)
+📝 H3: 'Appendix A:  ODL Envisioned Phases & Funding...' (Page 9)
+📝 H4: 'Phase I:  Business Planning...' (Page 9)
+📝 H4: 'Phase II: Implementing and Transitioning...' (Page 9)
+📝 H4: 'Phase III: Operating and Growing the ODL...' (Page 9)
+📝 H4: 'OVERVIEW OF ODL FUNDING MODEL...' (Page 10)
+📝 H3: 'Funding Source...' (Page 10)
+📝 H4: 'TOTAL ANNUAL...' (Page 10)
+📝 H3: 'Appendix B:...' (Page 11)
+📝 H4: '1. Preamble...' (Page 11)
+📝 H4: '2. Terms of Reference...' (Page 11)
+📝 H4: '3. Membership...' (Page 11)
+📝 H4: '4. Appointment Criteria and Process...' (Page 12)
+📝 H4: '5. Term...' (Page 12)
+📝 H4: '6. Chair...' (Page 12)
+📝 H4: '7. Meetings...' (Page 12)
+📝 H4: '8. Lines of Accountability and Communication...' (Page 12)
+📝 H4: '9. Financial and Administrative Policies...' (Page 13)
+📝 H3: 'Appendix C:...' (Page 14)
+
+📊 FINAL HEADING STATISTICS:
+  H1: 1 headings
+  H2: 2 headings
+  H3: 8 headings
+  H4: 30 headings
+🎉 PHASE 3 COMPLETE: 41 headings assigned
+
+✅ SUCCESS: E0H1CM114.pdf
+💾 Output: E0H1CM114.json
+📊 Headings: 41
+⏱️ Time: 19.25s
+📋 Title: 'RFP: quest r To Present a for Developing the Business Plan f...'
+
+================================================================================
+📄 PROCESSING FILE 4/5: STEMPathwaysFlyer.pdf
+================================================================================
+
+============================================================
+📖 CHECKING FOR EMBEDDED TABLE OF CONTENTS (PyMuPDF get_toc)
+============================================================
+✅ Found 4 entries in TOC
+
+⏩ Skipping Phase 1, 2 & 3: Using extracted Table of Contents as outline.
+
+✅ SUCCESS: STEMPathwaysFlyer.pdf
+💾 Output: STEMPathwaysFlyer.json
+📊 Headings: 4
+⏱️ Time: 0.19s
+📋 Title: 'Parsippany -Troy Hills STEM Pathways...'
+
+================================================================================
+📄 PROCESSING FILE 5/5: TOPJUMP-PARTY-INVITATION-20161003-V01.pdf
+================================================================================
+
+============================================================
+📖 CHECKING FOR EMBEDDED TABLE OF CONTENTS (PyMuPDF get_toc)
+============================================================
+✅ Found 1 entries in TOC
+
+⏩ Skipping Phase 1, 2 & 3: Using extracted Table of Contents as outline.
+
+✅ SUCCESS: TOPJUMP-PARTY-INVITATION-20161003-V01.pdf
+💾 Output: TOPJUMP-PARTY-INVITATION-20161003-V01.json
+📊 Headings: 1
+⏱️ Time: 0.17s
+📋 Title: 'HOPE To SEE You THERE! ...'
+
+🎉 PROCESSING COMPLETE!
+============================================================
+Completed PDF processing!
